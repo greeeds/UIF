@@ -14,7 +14,7 @@ import (
 
 	"github.com/getlantern/elevate"
 	"github.com/gorilla/websocket"
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 var serviceMutext sync.Mutex

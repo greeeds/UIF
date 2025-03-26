@@ -8,9 +8,9 @@ import (
 	"syscall"
 
 	"github.com/getlantern/systray"
-	"github.com/uif/uifd/icon"
-	"github.com/uif/uifd/uif"
 	"golang.org/x/sys/windows/registry"
+	"uifd/icon"
+	"uifd/uif"
 )
 
 func SetProcessDPIAware() error {

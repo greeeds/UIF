@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 func TestSetQuicLink(t *testing.T) {

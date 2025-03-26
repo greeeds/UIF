@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 var process *exec.Cmd

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 func UpdateSingBoxCore() {

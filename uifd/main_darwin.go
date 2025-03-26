@@ -6,7 +6,7 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/driver/desktop"
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 var fyenApp fyne.App

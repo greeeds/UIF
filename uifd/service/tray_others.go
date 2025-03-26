@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 func TrayInit() {

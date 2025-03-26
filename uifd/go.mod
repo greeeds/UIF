@@ -1,4 +1,4 @@
-module github.com/uif/uifd
+module uifd
 
 go 1.21
 

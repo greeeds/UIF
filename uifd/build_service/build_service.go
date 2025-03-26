@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/uif/uifd/uif"
+	"uifd/uif"
 )
 
 func GetServiceDir() string {
