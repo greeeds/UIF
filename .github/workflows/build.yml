@@ -109,20 +109,6 @@ jobs:
           name: release_dmg
           path: "./uif-darwin-arm64.dmg"
 
-      # build home page
-      - name: Update page
-        run: |
-          cd dist
-          ls
-          git init
-          git config --global user.name 'UIF'
-          git config --global user.email 'UIforFreedom@proton.me'
-          git config --global init.defaultBranch 'master'
-          git add --all
-          git remote add origin https://${{ secrets.UIF_TOKEN }}@github.com/UIforFreedom/UIforFreedom.github.io.git
-          git commit -am "auto update"
-          git push origin master --force
-
   build_windows_setup:
     needs: [build_uif]
     name: Build Windows Setup
@@ -180,8 +166,8 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ui4freedom
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN  }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
@@ -189,48 +175,5 @@ jobs:
           context: ./uifd
           file: ./uifd/Dockerfile
           push: true
-          tags: ui4freedom/uif:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/uif:latest
           platforms: linux/amd64,linux/arm64,linux/arm/v7
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "22.2.0"
-
-      - name: Download release
-        uses: actions/download-artifact@v4
-        with:
-          name: release_cache
-          path: ./doc/static/assets/release/
-
-      - name: Download dmg
-        uses: actions/download-artifact@v4
-        with:
-          name: release_dmg
-          path: ./doc/static/assets/release/
-
-      - name: Download setup
-        uses: actions/download-artifact@v4
-        with:
-          name: release_setup
-          path: ./doc/static/assets/release/
-
-      # build doc
-      - run: |
-          cd ./doc
-          npm install
-          npm run build
-          ls
-      - name: Update Doc
-        run: |
-          cd ./doc/build
-          git init
-          # git lfs install
-          # git lfs track "*.mp4"
-          # git lfs track "*.tar"
-          git config --global user.name 'UIF'
-          git config --global user.email 'UIF@uif.org'
-          git config --global init.defaultBranch 'master'
-          git add --all
-          git remote add origin https://${{ secrets.UIF_TOKEN }}@github.com/UIforFreedom/UIF_help.git
-          git commit -am "auto update"
-          git push origin master --force
