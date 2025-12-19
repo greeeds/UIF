@@ -32,7 +32,7 @@ jobs:
           git config --global user.email 'UIF@uif.org'
           git config --global init.defaultBranch 'master'
           git add --all
-          git remote add origin https://${{ secrets.UIF_TOKEN }}@github.com/UIforFreedom/UIF.git
+          git remote add origin https://${{ secrets.UIF_TOKEN }}@github.com/greeeds/UIF.git
           git commit -am "auto update"
           git tag "v${{ steps.read_version.outputs.version }}"
           git push origin "v${{ steps.read_version.outputs.version }}" --force

@@ -306,7 +306,7 @@ function createRouter() {
       component: Layout,
       hidden: isSimple,
       children: [{
-        path: 'https://github.com/UIforFreedom/UIF',
+        path: 'https://github.com/greeeds/UIF',
         meta: {
           title: Translator({
             'cn': 'UIF 官网',

@@ -69,7 +69,7 @@ export default {
   components: { VueQrcode },
   data() {
     return {
-      share_info: "https://github.com/UIforFreedom/UIF",
+      share_info: "https://github.com/greeeds/UIF",
       share_style: "完整文本",
     };
   },

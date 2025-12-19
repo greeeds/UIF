@@ -645,8 +645,8 @@ export default {
       ],
       UIFUpdateAddressList: [
         {
-          value: "https://github.com/UIforFreedom/UIF",
-          name: "UIforFreedom/UIF",
+          value: "https://github.com/greeeds/UIF",
+          name: "greeeds/UIF",
         },
       ],
     };

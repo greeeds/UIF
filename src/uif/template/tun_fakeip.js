@@ -591,7 +591,7 @@ export function AddRouteList(res, uifConfig, routeList, isShare) {
       "tag": "adguard-filter-list",
       "format": "binary",
       "url": "https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Singbox.srs",
-      // "url": "https://fastly.jsdelivr.net/gh/UIforFreedom/UIF@master/uifd/adguard/adguard-filter-list.srs",
+      // "url": "https://fastly.jsdelivr.net/gh/greeeds/UIF@my/uifd/adguard/adguard-filter-list.srs",
       "download_detour": "proxy",
       "update_interval": "1d"
     })

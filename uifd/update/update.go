@@ -95,7 +95,7 @@ func UpdateFRPCore() {
 
 func UpdateSetup() {
 	version := uif.GetNewestUIFVersion()
-	archURL := "https://github.com/UIforFreedom/UIF/releases/download/v" + version + "/uif-windows-amd64.zip"
+	archURL := "https://github.com/greeeds/UIF/releases/download/v" + version + "/uif-windows-amd64.zip"
 	downloadPath := uif.GetWorkSpace() + "/uif-windows-amd64.zip"
 	if err, _ := uif.DownloadFile(downloadPath, archURL); err != nil {
 		panic(err)

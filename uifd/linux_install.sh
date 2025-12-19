@@ -105,14 +105,11 @@ download_and_install_system_service(){
 
   GITHUB_CONTENT_LINK1="https://cdn.jsdelivr.net/gh/greeeds/UIF@my/uifd"
   GITHUB_CONTENT_LINK2="https://raw.githubusercontent.com/greeeds/UIF/my/uifd"
-  GITHUB_CONTENT_LINK3="https://ui4freedom.org/UIF_help/assets/release"
 
   if check_url "$GITHUB_CONTENT_LINK1"; then
     service_download_url=$GITHUB_CONTENT_LINK1
   elif check_url "$GITHUB_CONTENT_LINK2"; then
     service_download_url=$GITHUB_CONTENT_LINK2
-  elif check_url "$GITHUB_CONTENT_LINK3"; then
-    service_download_url=$GITHUB_CONTENT_LINK3
   else
     quit_with_error "can not found available url to download system service."
   fi
@@ -241,16 +238,9 @@ extract_port_from_file() {
 
 download_uif() {
   FILE_NAME="uif-linux-$UIFARCH.tar.gz"
-  GITHUB_RELEASE_LINK1="https://ui4freedom.org/UIF_help/assets/release"
-  GITHUB_RELEASE_LINK2="https://github.com/UIforFreedom/UIF/releases/latest/download"
+  GITHUB_RELEASE_LINK2="https://github.com/greeeds/UIF/releases/latest/download"
+  UIF_DOWNLOAD_LINK="$GITHUB_RELEASE_LINK2/$FILE_NAME"
 
-  if check_url "$GITHUB_RELEASE_LINK1"; then
-    UIF_DOWNLOAD_LINK="$GITHUB_RELEASE_LINK1/$FILE_NAME"
-  elif check_url "$GITHUB_RELEASE_LINK2"; then
-    UIF_DOWNLOAD_LINK="$GITHUB_RELEASE_LINK2/$FILE_NAME"
-  else
-    quit_with_error "can not found available url to download UIF."
-  fi
 
   UIF_TAR_SAVE_PATH="./$FILE_NAME"
   print_colored_text "green" "bold" "Downloading from: $UIF_DOWNLOAD_LINK"
@@ -260,16 +250,7 @@ download_uif() {
 }
 
 get_uif_newest_version() {
-  VERSION_LINK1="https://ui4freedom.org/UIF_help/assets/release/version/uif.txt"
-  VERSION_LINK2="https://github.com/UIforFreedom/UIF/releases/latest/download/version/uif.txt"
-
-  if check_url "$VERSION_LINK1"; then
-    VERSION_LINK=$VERSION_LINK1
-  elif check_url "$VERSION_LINK2"; then
-    VERSION_LINK=$VERSION_LINK2
-  fi
-
-  local temp=$(curl -s $VERSION_LINK)
+  local temp=25.01.12
   print_colored_text "green" "bold" "Using UIF Version: v$temp"
 }
 
