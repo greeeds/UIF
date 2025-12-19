@@ -68,7 +68,7 @@ import Highlight from './random_url.jsx';
 
 已被屏蔽，需要翻墙后才能使用
 
-<Highlight domain="https://raw.githubusercontent.com/UIforFreedom/Free_Proxy_Nodes/master" />
+<Highlight domain="https://raw.githubusercontent.com/greeeds/Free_Proxy_Nodes/master" />
 
 </TabItem>
 
