@@ -103,8 +103,8 @@ download_and_install_system_service(){
     return
   fi
 
-  GITHUB_CONTENT_LINK1="https://cdn.jsdelivr.net/gh/greeeds/UIF@master/uifd"
-  GITHUB_CONTENT_LINK2="https://raw.githubusercontent.com/greeeds/UIF/master/uifd"
+  GITHUB_CONTENT_LINK1="https://cdn.jsdelivr.net/gh/greeeds/UIF@my/uifd"
+  GITHUB_CONTENT_LINK2="https://raw.githubusercontent.com/greeeds/UIF/my/uifd"
   GITHUB_CONTENT_LINK3="https://ui4freedom.org/UIF_help/assets/release"
 
   if check_url "$GITHUB_CONTENT_LINK1"; then

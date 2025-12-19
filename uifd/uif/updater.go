@@ -207,13 +207,13 @@ func UpdateCoreVersion(version string) {
 }
 
 func GetNewestCoreVersion() string {
-	res, _, _ := HTTPGetProxy("https://raw.githubusercontent.com/greeeds/UIF/master/uifd/version/core.txt")
+	res, _, _ := HTTPGetProxy("https://raw.githubusercontent.com/greeeds/UIF/my/uifd/version/core.txt")
 	res = strings.Split(res, "\n")[0]
 	return res
 }
 
 func GetNewestUIFVersion() string {
-	res, _, _ := HTTPGetProxy("https://raw.githubusercontent.com/greeeds/UIF/master/uifd/version/uif.txt")
+	res, _, _ := HTTPGetProxy("https://raw.githubusercontent.com/greeeds/UIF/my/uifd/version/uif.txt")
 	res = strings.Split(res, "\n")[0]
 	return res
 }
